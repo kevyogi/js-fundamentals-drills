@@ -287,7 +287,19 @@ var stringCountBelowThree = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+// var countObjects = function(arr){   //too easy
+//   return arr.length;
+// };
+
+var countObjects = function(arr){
+  var count = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(typeof arr[i] === "object"){
+      count += 1;
+    }
+  }
+  return count;
+};
 
 /* #getObjectKeys
  *
@@ -296,7 +308,10 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys = function(obj){
+  var keyArray = Object.keys(obj);
+  return keyArray;
+};
 
 /* #getObjectValues
  *
@@ -305,7 +320,13 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function(obj){
+  var newArray = [];
+  for(var val in obj){
+    newArray.push(obj[val]);
+  }
+  return newArray;
+};
 
 /* #makeObject
  *
@@ -502,8 +523,8 @@ module.exports = {
   getKeys: getKeys,
   sumAllPositive: sumAllPositive,
   stringCountBelowThree: stringCountBelowThree,
-  countObjects: null,
-  getObjectKeys: null,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
   getObjectValues: null,
   makeObject: null,
   makeObjectReverse: null,
