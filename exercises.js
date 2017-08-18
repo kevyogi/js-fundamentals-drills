@@ -592,7 +592,12 @@ var charCountMap = function(arr){
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+// var frequencyMap = function(arr){
+//   var myObject = {};
+//   for(var i = 0; i < arr.length; i++){
+//     myObject[arr[i]] = 
+//   }
+// };
 
 /* #tupleConvertToObject
  *
@@ -602,7 +607,13 @@ var frequencyMap;
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
+var tupleConvertToObject = function(arr){
+  var myObject = {};
+  for(var i = 0; i < arr.length; i++){
+    myObject[arr[i][0]] = arr[i][1];
+  }
+  return myObject;
+};
 
 
 module.exports = {
@@ -645,5 +656,5 @@ module.exports = {
   stringToKeys: stringToKeys,
   charCountMap: charCountMap,
   frequencyMap: null,
-  tupleConvertToObject: null
+  tupleConvertToObject: tupleConvertToObject
 };
