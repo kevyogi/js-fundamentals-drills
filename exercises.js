@@ -5,12 +5,12 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray = function(arr) {
+function doubleArray(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
+    result.push(arr[i] * 2) ;
   }
-  return result
+  return result;
 }
 
 /* #sumArrays
@@ -21,7 +21,18 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+var sumArrays = function(arr1, arr2){
+  var sum1 = 0;
+  var sum2 = 0;
+  for(var i = 0; i < arr1.length; i++){
+    sum1 += arr1[i];
+  }
+  for(var j = 0; j < arr2.length; j++){
+    sum2 += arr2[j];
+  }
+  return sum1 + sum2;
+};
+
 
 /* #stringCount
  *
@@ -30,7 +41,10 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(string){
+  var theCount =  string.length;
+  return theCount;
+};
 
 /* #arrayLength
  *
@@ -39,7 +53,10 @@ var stringCount;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr){
+  var theLength = arr.length;
+  return theLength;
+};
 
 /* #countAll
  *
@@ -48,7 +65,13 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr){
+  var sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    sum += arr[i];
+  }
+  return sum;
+};
 
 /* #countStrings
  *
@@ -57,7 +80,13 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function(arr){
+  var newArray = [];
+  for(var i = 0; i < arr.length; i++){
+    newArray[i] = arr[i].length;
+  }
+  return newArray;
+};
 
 /* #countAllStrings
  *
@@ -66,7 +95,13 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+var countAllStrings = function(arr){
+  var sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    sum += arr[i].length;
+  }
+  return sum;
+};
 
 /* #convertToArray
  *
@@ -379,13 +414,13 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
-  countAllStrings: null,
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
+  countAllStrings: countAllStrings,
   convertToArray: null,
   objectSize: null,
   createZeroFilledArray: null,
