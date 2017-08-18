@@ -525,7 +525,7 @@ module.exports = {
   stringCountBelowThree: stringCountBelowThree,
   countObjects: countObjects,
   getObjectKeys: getObjectKeys,
-  getObjectValues: null,
+  getObjectValues: getObjectValues,
   makeObject: null,
   makeObjectReverse: null,
   tupleToObject: null,
