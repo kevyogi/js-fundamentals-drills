@@ -596,16 +596,12 @@ var frequencyMap = function(arr) {
   myObject = {};
   var sortArr = arr.sort();
   for(var i = 0; i < arr.length; i++){
-    var occurrence = 0;
-    if(sortArr.indexOf(arr[i]) === sortArr.lastIndexOf(arr[i])){
-      occurrence = 1;
-    }else if(sortArr.indexOf(arr[i]) !== sortArr.lastIndexOf(arr[i])){
-      occurrence = (sortArr.lastIndexOf(arr[i]) - sortArr.indexOf(arr[i]) + 1);
-    }
+    var occurrence = (sortArr.lastIndexOf(arr[i]) - sortArr.indexOf(arr[i]) + 1);
     myObject[arr[i]] = occurrence;
   }
   return myObject;
 };
+
 /* #tupleConvertToObject
  *
  * takes in an array of tuples and and returns an object whos keys are 
