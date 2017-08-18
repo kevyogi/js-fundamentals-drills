@@ -560,7 +560,14 @@ var arrayToObjectNums = function(arr){
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+var stringToKeys = function(str){
+  var myObject = {};
+  var splitString = str.split("");
+  for(var i = 0; i < splitString.length; i++){
+    myObject[splitString[i]] = true;
+  }
+  return myObject;
+};
 
 /* #charCountMap
  *
@@ -629,7 +636,7 @@ module.exports = {
   mapArrayValues: mapArrayValues,
   mapStringCounts: mapStringCounts,
   arrayToObjectNums: arrayToObjectNums,
-  stringToKeys: null,
+  stringToKeys: stringToKeys,
   charCountMap: null,
   frequencyMap: null,
   tupleConvertToObject: null
